@@ -4,27 +4,27 @@ This is a repository of various projects
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+Diagram.png https://github.com/Ferdish0/Code-Bootcamp/blob/main/Diagram.png
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - web1playbook.yml._
 
 This document contains the following details:
-- Description of the Topologu
-- Access Policies
-- ELK Configuration
+- This is a topology with a web server behind a load balancer and a jumpbox that is behind a firewall
+- Current access policies are an open port 80 and 5601 allow rdp and ssh into web servers and an open conection for the ip  172.72.118.152
+- ELK Configuration is 3 web vms
   - Beats in Use
-  - Machines Being Monitored
-- How to Use the Ansible Build
+  - 3 Machines Being Monitored
+- The Ansible Build can be executed using the ansibleplaybook.yml which can be used to implement new security groups.
 
 
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly reliable, in addition to restricting overload to the network.
+- A load balancer will help protect one of the most vital aspects of the web which is availability. A jump box is also important as it is a hardened machine that can allow a controlled access to the web servers 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
