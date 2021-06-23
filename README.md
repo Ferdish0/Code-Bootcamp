@@ -14,7 +14,6 @@ This document contains the following details:
 - This is a topology with a web server behind a load balancer and a jumpbox that is behind a firewall
 - Current access policies are an open port 80 and 5601 allow rdp and ssh into web servers and an open conection for the ip  172.72.118.152
 - ELK Configuration is 3 web vms
-  - Beats in Use
   - 3 Machines Being Monitored
 - The Ansible Build can be executed using the ansibleplaybook.yml which can be used to implement new security groups.
 
