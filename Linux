@@ -1,1 +1,13 @@
 Linux
+ssh Redadmin@52.240.54.128
+sudo docker ps
+sudo docker conatiner list -a
+sudo docker container start recursive_ramaja
+sudo docker container attach recursive_ramaja
+curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml
+visudo /etc/filebeat/filebeat-config.yml
+curl https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
+dpkg -i filebeat-7.4.0-amd64.deb
+run ansible-playbook filebeat-playbook.yml
+curl https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.4.0-amd64.deb
+dpkg -i metricbeat.deb
